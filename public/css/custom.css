@@ -1,0 +1,123 @@
+
+body {
+	background: #141E30;  
+	background: -webkit-linear-gradient(to left, #243B55, #141E30);  
+	background: linear-gradient(to left, #243B55, #141E30); 
+}
+
+.title {
+	margin-top: 5%;
+}
+
+h1 {
+	color: #F4E6FA;
+	text-align: center;
+	letter-spacing: .1em;
+	font-family: 'Great Vibes', cursive; 
+	animation-name: showup;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+	animation-duration: 9s;
+}
+
+h1:hover {
+	text-shadow: 2px 2px 2px rgba(255, 0, 255, 0.6);
+}
+
+@keyframes showup {
+  0% {
+	  transform: translateY(-600px);  
+  }
+  100% {
+	  transform: translateY(0px);      
+  }
+}
+
+.root {
+	margin-top: 5%;
+	animation-name: path;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+	animation-duration: 8s;
+}
+
+@keyframes path {
+  0% {
+	  transform: translateY(-600px);      
+  }
+  25% {
+	  transform: translateY(300px);      
+  }
+  50% {
+	  transform: translateY(600px); 
+  }
+  100% {
+	  transform: translateY(0px);      
+  }
+}
+
+.container {
+	display: flex;
+	justify-content: center;  /* TO CENTRALIZE THE CONTENT INSIDE THE CONTAINER */
+}
+
+.circle {
+	display: flex;
+	justify-content: center;  /* TO CENTRALIZE THE CONTENT INSIDE THE CONTAINER */
+	height: 200px;
+	width: 200px;
+	border: 25px solid #9a12b3;
+	border-top-color: #0B9665;
+	border-bottom-color: #171F96;
+	border-radius: 50%;
+	flex-direction: column;
+	animation-name: spin;	
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+	animation-delay: 0s;
+}
+
+i {
+	font-size: 70px;
+	font-weight: bolder;
+	padding: 0px;
+	margin: 0px;
+	border: 0px solid #eee;
+	height: 70px;
+	width: 150px;
+	text-align: center;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+}
+
+#wrench {
+	color: #111;
+	position: absolute;
+	animation-name: spin;
+	animation-direction: reverse;
+}
+
+#screwdriver {
+	color: #222;
+	animation-name: spin;
+}
+
+@keyframes spin{
+	0%{
+		transform: rotate(0deg) rotateY(0deg);
+	}
+	50% {
+		transform: rotate(180deg) rotateY(-180deg) ;
+	}
+	100% {
+		transform:  rotate(360deg) rotateY(-360deg) ;
+	}
+}
+
+.circle:hover i {
+	opacity: 0.1 ;
+}
+
+
